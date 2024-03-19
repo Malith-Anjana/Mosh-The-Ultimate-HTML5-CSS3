@@ -5,3 +5,56 @@
     --color-headings: #1b0760;
     --color-body: #918ca4; 
 }
+html{
+    /* normally default font size in the all browser is 16px. bu it can be vary. */
+    /* 62.5% of 16px = 10px this is the trick beacause user changes the font size in web browser. it automatically changes all fonts in html tags */
+    font-size: 62.5%;
+}
+body {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    color: var(--color-body);
+    font-size: 2.4rem;
+    line-height: 1.5;
+}
+
+h1, h2, h3 {
+    color: var(--color-headings);
+    margin-bottom: 1rem;
+}
+
+h1{
+    /*Becase of using 62.5% font size in html tag above 1rem means 10px*/
+    font-size: 7rem ; 
+}
+
+
+h2{
+    /*Becase of using 62.5% font size in html tag above 1rem means 10px*/
+    font-size: 4rem ; 
+}
+
+
+h3{
+    /*Becase of using 62.5% font size in html tag above 1rem means 10px*/
+    font-size:3rem ; 
+}
+
+p{
+    margin-top: 0;
+}
+
+@media screen and (min-width:1024px) {
+    body {
+        font-size: 1.8rem;
+    }
+
+    h1{
+        font-size: 8rem;
+    }
+    h2{
+        font-size: 4rem;
+    }
+    h3{
+        font-size: 2.4rem
+    }
+}
