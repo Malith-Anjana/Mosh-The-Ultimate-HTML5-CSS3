@@ -16,6 +16,10 @@
 }
 
 /* Typography */
+::selection {
+    background-color: var(--color-primary);
+    color: #fff;
+}
 html{
     /* normally default font size in the all browser is 16px. bu it can be vary. */
     /* 62.5% of 16px = 10px this is the trick beacause user changes the font size in web browser. it automatically changes all fonts in html tags */
@@ -49,6 +53,7 @@ h2{
 h3{
     /*Becase of using 62.5% font size in html tag above 1rem means 10px*/
     font-size:3rem ; 
+    font-weight: 500;
 }
 
 p{
@@ -143,17 +148,18 @@ a{
     list-style: none;
     padding-left: 0;
     font-weight: 500;
-    color: var(--color-headings);
 }
 
 .list--inline .list__item {
     display: inline-block;
     margin-right: 2rem;
+    
 }
 
 .list--tick{
     list-style-image: url(../icons/tick.svg);
     padding-left: 3rem;
+    color: var(--color-headings);
 }
 .list--tick .list__item{
     padding-left: 0.5rem;
@@ -417,6 +423,7 @@ a{
 /* Media */
 .media {
     display: flex;
+    margin-bottom: 4rem;
 }
 
 .media__title {
@@ -605,6 +612,7 @@ a{
 
 .block__header {
     text-align: center;
+    margin-bottom: 4rem;
 }
 
 .block__headings {
@@ -622,12 +630,12 @@ a{
 
 .block--skewed-right {
     padding-bottom: calc(var(--padding-vertical) + 4rem);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
 }
 
 .block--skewed-left {
     padding-bottom: calc(var(--padding-vertical) + 4rem);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
 }
 
 /* Navigation Bar */
@@ -779,3 +787,20 @@ transform: translateY(5px);
     }
  }
 
+ /* Showcase */
+ .block-showcase__image{
+    width: 100%;
+    max-width: 700px;
+ }
+
+ @media screen and (min-width: 768px) {
+    .block-showcase .grid{
+        grid-template-columns: 50% 50%;
+    }
+    .block-showcase__image{
+        width: auto;
+        max-width: 700px;
+        justify-self: end;
+    }
+    
+ }
